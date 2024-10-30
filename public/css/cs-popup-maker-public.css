@@ -1,0 +1,247 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+
+
+*{margin:0; padding: 0;}
+body{text-align: center; color: #fff; font-family: 'open sans';}
+img{ outline: none; border: none; max-width: 100%; height: auto}
+
+.transition{-webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;}
+.cs-overlay{
+    background: rgba(0,0,0,0.5);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 98;
+}
+.cs-popup-container{
+    position: relative;
+    z-index: 9999;
+}
+.cs-popup-wrap{
+    width:auto;
+    max-width: 90%;
+    /*min-width: 70%;*/
+    border-radius: 5px;
+    border: 10px solid #fff;
+    position: fixed;
+    top:50%;
+    left:50%;
+    -ms-transform: translate(-50%, -50%); /* IE 9 */
+    -webkit-transform: translate(-50%, -50%); /* Safari */
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.12);
+}
+.cs-popup-wrap img{
+    float: left;
+}
+
+.cs-popup-wrap .close-button{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 35px;
+    height: 35px;
+    padding: 1px;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0.1;
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+}
+.cs-popup-wrap:hover .close-button{opacity: 1}
+
+/* html popup */
+
+
+.cs-wrapper-full {
+    display: block;
+    height: 100%;
+    margin: 0 auto;
+    padding: 30px 0;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    z-index: 9999999999999999999999999999999999;
+}
+
+.cs-wrapper-full .cs-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  /* -webkit-transition: opacity 500ms; */
+  /* transition: opacity 500ms; */
+  visibility: visible;
+  opacity: 1;
+}
+
+.cs-wrapper-full .cs-overlay::target {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.cs-wrapper-full .cs-pop-up {
+  background: #fff;
+  border-radius: 5px;
+  height: 88vh;
+  margin: 50px auto;
+  max-height: 100%;
+  max-width: 100%;
+  padding: 20px;
+  position: relative;
+  /* -webkit-transition: all 5s ease-in-out; */
+/*   transition: all 5s ease-in-out; */
+  width: 80%;
+}
+
+.cs-wrapper-full .cs-pop-up .cs-close-pop {
+  color: #333;
+  font-size: 30px;
+  font-weight: bold;
+  position: absolute;
+  right: 30px;
+  text-decoration: none;
+  top: 20px;
+  /* -webkit-transition: all 200ms; */
+ /*  transition: all 200ms; */
+}
+
+.cs-wrapper-full .cs-pop-up-left-bottom {
+    background: #e14040;
+    bottom: 0;
+    height: auto;
+    left:0;
+    max-width: 100%;
+    position: absolute;
+  /* -webkit-transition: all 5s ease-in-out; */
+/*   transition: all 5s ease-in-out; */
+    right: unset;
+    top: unset;
+    width: 50%;
+}
+
+.cs-wrapper-full .cs-pop-up-left-bottom .cs-close-pop {
+  color: #333;
+  font-size: 30px;
+  font-weight: bold;
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  text-decoration: none;
+  /* -webkit-transition: all 200ms; */
+/*   transition: all 200ms; */
+}
+
+.cs-wrapper-full .cs-pop-up-right-bottom {
+  background: #e14040;
+  bottom: 0;
+  height: auto;
+    left: unset;
+  max-width: 100%;
+  position: absolute;
+  right: 0;
+  /* -webkit-transition: all 5s ease-in-out; */
+  /* transition: all 5s ease-in-out; */
+  top: unset;
+  width: 50%;
+}
+
+.cs-wrapper-full .cs-pop-up-right-bottom .cs-close-pop {
+  color: #333;
+  font-size: 30px;
+  font-weight: bold;
+  position: absolute;
+  right: 30px;
+  text-decoration: none;
+  top: 20px;
+  /* -webkit-transition: all 200ms; */
+  /* transition: all 200ms; */
+}
+
+.cs-wrapper-full .cs-pop-up-center-bottom {
+  background: #e14040;
+  bottom: 0;
+    height: auto;
+    left: unset;
+  margin: 0 auto;
+  max-width: 100%;
+  position: absolute;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  /* -webkit-transition: all 5s ease-in-out; */
+ /*  transition: all 5s ease-in-out; */
+    right: unset;
+    top: unset;
+  width: 50%;
+}
+
+.cs-wrapper-full .cs-pop-up-center-bottom .cs-close-pop {
+  color: #333;
+  font-size: 30px;
+  font-weight: bold;
+  position: absolute;
+  right: 30px;
+  text-decoration: none;
+  top: 20px;
+  /* -webkit-transition: all 200ms; */
+/*   transition: all 200ms; */
+}
+
+.cs-wrapper-full .cs-pop-up-full-bottom {
+  background: #e14040;
+  bottom: 0;
+    height: auto;
+    left: unset;
+  margin: 0 auto;
+  max-width: 100%;
+  position: absolute;
+  /* -webkit-transition: all 5s ease-in-out; */
+ /*  transition: all 5s ease-in-out; */
+    right: unset;
+    top: unset;
+  width: 100%;
+}
+
+.cs-wrapper-full .cs-pop-up-full-bottom .cs-close-pop {
+  color: #333;
+  font-size: 30px;
+  font-weight: bold;
+  position: absolute;
+  right: 30px;
+  text-decoration: none;
+  top: 20px;
+  /* -webkit-transition: all 200ms; */
+ /*  transition: all 200ms; */
+}
+
+.cs-wrapper-full .cs-heading h1 {
+  text-transform: capitalize;
+}
+
+.cs-wrapper-full .cs-subheading h2 {
+  text-transform: capitalize;
+}
+
+.cs-wrapper-full a.cs-button {
+  /*background-color: #ddd;*/
+  /*border: none;*/
+  /*border-radius: 5px;*/
+  /*cursor: pointer;*/
+  /*display: inline-block;*/
+  /*font-size: 15px;*/
+  /*font-weight: 700;*/
+  /*margin: 25px 0;*/
+  /*padding: 20px 15px;*/
+  /*text-transform: uppercase;*/
+}
